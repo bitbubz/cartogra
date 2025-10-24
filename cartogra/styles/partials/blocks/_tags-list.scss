@@ -1,0 +1,25 @@
+@use "../variables" as *;
+@use "../utils" as *;
+@use "../mixins" as *;
+
+.tags-list {
+  @include reset-list();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: pxToRem(16);
+  margin-bottom: pxToRem(45);
+  &__item {
+  }
+  &__link {
+    display: inline-flex;
+    text-decoration: none;
+    color: $color-white;
+    background: $color-primary-dark;
+    border-radius: 32px;
+    padding: pxToRem(4) pxToRem(8);
+    font-size: pxToRem(14);
+    font-weight: 700;
+    line-height: normal;
+  }
+}

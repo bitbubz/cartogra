@@ -1,0 +1,21 @@
+@use "../variables" as *;
+@use "../utils" as *;
+
+.cta {
+  display: inline-flex;
+  background: $color-primary-dark;
+  text-decoration: none;
+  color: $color-white;
+  font-weight: 800;
+  line-height: 1.28;
+  text-transform: uppercase;
+  font-size: pxToRem(14);
+  padding: pxToRem(13) pxToRem(36);
+  border-radius: 8px;
+  border: 1px solid $color-primary-dark;
+  &--inverse {
+    color: $color-gray-dark;
+    background: $color-background-light;
+    border: 1px solid $color-gray-medium;
+  }
+}

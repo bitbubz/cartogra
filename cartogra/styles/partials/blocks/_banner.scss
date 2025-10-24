@@ -1,0 +1,84 @@
+@use "../variables" as *;
+@use "../utils" as *;
+@use "../mixins" as *;
+
+.banner {
+  $self: &;
+  background: $color-accent;
+  color: $color-white;
+  position: relative;
+  padding: pxToRem(16);
+  @include tablet {
+    padding: pxToRem(168) pxToRem(138) pxToRem(168) pxToRem(16);
+  }
+  @include desktop {
+    padding: pxToRem(168) pxToRem(138);
+  }
+  &__wrapper {
+    @extend %wrapper;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: pxToRem(32);
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
+  &__text-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 pxToRem(16) 0 0;
+    @include tablet {
+      width: 50%;
+    }
+  }
+  &__title {
+    font-family: "Literata", serif;
+    color: $color-off-white;
+    font-size: pxToRem(47);
+    font-weight: 400;
+    letter-spacing: pxToRem(-0.94);
+    line-height: 1.0425;
+  }
+  &__description {
+    font-size: pxToRem(16);
+    font-weight: 400;
+    line-height: 1.3125;
+  }
+  &__cta {
+  }
+  &__image {
+    width: 100%;
+    @include tablet {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &--inverse {
+    color: $color-gray-dark;
+    background: $color-gray-medium;
+    #{$self}__title {
+      color: $color-primary-dark;
+    }
+  }
+  &--featured {
+    padding: pxToRem(32) pxToRem(8);
+    @include tablet {
+      padding: pxToRem(168) pxToRem(138) pxToRem(168) pxToRem(16);
+    }
+    #{$self}__title {
+      font-size: pxToRem(46);
+      letter-spacing: pxToRem(-1.36);
+      margin-top: 0;
+      @include tablet {
+        font-size: pxToRem(68);
+      }
+    }
+  }
+}

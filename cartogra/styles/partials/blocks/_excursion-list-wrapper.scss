@@ -1,0 +1,20 @@
+@use "../variables" as *;
+@use "../utils" as *;
+@use "../mixins" as *;
+
+.excursion-list-wrapper {
+  @extend %wrapper;
+  position: relative;
+  width: calc(100% - pxToRem(32));
+  max-width: 1049px;
+  background: $color-white;
+  border-radius: 12px;
+  padding: pxToRem(40) pxToRem(32);
+  margin-bottom: pxToRem(52);
+  @include tablet {
+    padding: pxToRem(40) pxToRem(58);
+  }
+  @include desktop {
+    margin-bottom: pxToRem(162);
+  }
+}

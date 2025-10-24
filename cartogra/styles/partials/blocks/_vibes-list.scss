@@ -1,0 +1,43 @@
+@use "../variables" as *;
+@use "../utils" as *;
+@use "../mixins" as *;
+
+.vibes-list {
+  @include reset-list();
+  @extend %wrapper;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: pxToRem(32);
+  &__item {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    text-align: left;
+    @include tablet {
+      width: calc(33.333% - pxToRem(32));
+    }
+  }
+  &__link {
+  }
+  &__image {
+    border-radius: 16px;
+  }
+  &__vibe {
+    position: absolute;
+    bottom: pxToRem(16);
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex;
+    text-decoration: none;
+    color: $color-white;
+    font-size: pxToRem(24);
+    font-style: normal;
+    line-height: normal;
+    font-weight: 700;
+    border-radius: 32px;
+    padding: pxToRem(4) pxToRem(24);
+    background: $color-primary-dark;
+  }
+}

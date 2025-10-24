@@ -1,0 +1,53 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+@use "../utils" as *;
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__video {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: pxToRem(811);
+    object-fit: cover;
+    object-position: center bottom;
+  }
+  &__content {
+    z-index: 1;
+    background: $color-white;
+    width: calc(100% - pxToRem(32));
+    max-width: 1049px;
+    margin: 0 auto;
+    border-radius: 12px;
+   padding: pxToRem(40) pxToRem(32);
+    font-size: pxToRem(22);
+    text-align: center;
+    @include tablet {
+      padding: pxToRem(40) pxToRem(58);
+    }
+  }
+  &__title {
+    @extend %wrapper;
+    font-family: "Literata", serif;
+    color: $color-white;
+    z-index: 10;
+    text-align: center;
+    font-size: pxToRem(82);
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.22;
+    letter-spacing: pxToRem(-3.6);
+    margin: pxToRem(32) auto;
+    @include tablet {
+      font-size: pxToRem(120);
+      margin: pxToRem(182) auto pxToRem(134) auto;
+    }
+  }
+  &__description {
+    text-align: center;
+    margin: 0 0 pxToRem(75) 0;
+  }
+}

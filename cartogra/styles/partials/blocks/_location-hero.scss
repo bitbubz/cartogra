@@ -1,0 +1,58 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+@use "../utils" as *;
+
+.location-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__bg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: pxToRem(811);
+    object-fit: cover;
+    object-position: center bottom;
+    &--top {
+      object-position: center top;
+    }
+  }
+  &__content {
+    z-index: 1;
+    background: $color-white;
+    width: calc(100% - pxToRem(32));
+    max-width: 1049px;
+    margin: pxToRem(250) auto 0 auto;
+    border-radius: 12px;
+    padding: pxToRem(40) pxToRem(32);
+    font-size: pxToRem(22);
+    text-align: center;
+    @include tablet {
+      margin: pxToRem(503) auto 0 auto;
+      padding: pxToRem(40) pxToRem(58);
+    }
+  }
+  &__title {
+    font-family: "Albert Sans", sans-serif;
+    color: $color-accent-2;
+    font-size: pxToRem(32);
+    font-weight: 700;
+    line-height: normal;
+    margin: 0 0 pxToRem(32) 0;
+    @include tablet {
+      font-size: pxToRem(56);
+    }
+  }
+  &__description {
+    text-align: center;
+    margin: 0 0 pxToRem(32) 0;
+    color: $color-text-dark;
+  }
+  &__price {
+    color: $color-text-dark;
+    font-size: pxToRem(22);
+    font-weight: 700;
+    margin: 0 0 pxToRem(32) 0;
+  }
+}

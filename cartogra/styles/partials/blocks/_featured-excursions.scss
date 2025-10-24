@@ -1,0 +1,31 @@
+@use "../variables" as *;
+@use "../utils" as *;
+@use "../mixins" as *;
+
+.featured-excursions {
+  background: $color-accent;
+  text-align: center;
+  background: url("./../assets/images/featured-excursions-bg.png"),
+    $color-accent;
+  background-size: pxToRem(1312) pxToRem(526), cover;
+  background-repeat: no-repeat;
+  background-position: center pxToRem(367);
+  padding: pxToRem(64) pxToRem(16) pxToRem(57) pxToRem(16);
+  &__title {
+    font-size: pxToRem(36);
+    color: $color-white;
+    max-width: pxToRem(689);
+    margin: 0 auto pxToRem(24) auto;
+    @include tablet {
+      font-size: pxToRem(56);
+    }
+  }
+  &__description {
+    color: $color-white;
+    font-size: pxToRem(16);
+    font-weight: 400;
+    line-height: 1.312;
+    max-width: pxToRem(689);
+    margin: 0 auto pxToRem(55) auto;
+  }
+}

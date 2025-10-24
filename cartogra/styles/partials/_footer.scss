@@ -1,0 +1,76 @@
+@use "./variables" as *;
+@use "./utils" as *;
+@use "./mixins" as *;
+
+.site-footer {
+  $self: &;
+  background: $color-primary-dark;
+  color: $color-white;
+  padding: pxToRem(48) pxToRem(16);
+  &__wrapper {
+    @extend %wrapper;
+  }
+  &__links-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: pxToRem(16);
+    order: 2;
+    @include tablet {
+      width: 75%;
+      order: 1;
+      gap: pxToRem(80);
+    }
+    > div {
+      width: 100%;
+      @include tablet {
+        width: auto;
+      }
+    }
+  }
+  &__about-wrapper {
+    width: 100%;
+    order: 1;
+    @include tablet {
+      width: 25%;
+      order: 2;
+    }
+  }
+  &__title {
+    margin: 0 0 pxToRem(16) 0;
+  }
+  &__list {
+    @include reset-list();
+    &--social {
+      display: flex;
+      gap: pxToRem(32);
+    }
+    &--terms {
+      display: flex;
+      gap: pxToRem(24);
+    }
+  }
+  &__item {
+  }
+  &__link {
+    color: $color-white;
+    text-decoration: none;
+  }
+  &__top-section {
+    display: flex;
+    flex-wrap: wrap;
+    #{$self}__item {
+      margin-bottom: pxToRem(16);
+    }
+  }
+  &__bottom-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+}

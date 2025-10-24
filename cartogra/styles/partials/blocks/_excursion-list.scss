@@ -1,0 +1,51 @@
+@use "../variables" as *;
+@use "../utils" as *;
+@use "../mixins" as *;
+
+.excursion-list {
+  @include reset-list();
+  display: flex;
+  flex-wrap: wrap;
+  gap: pxToRem(20);
+  counter-reset: step-number;
+  text-align: left;
+  margin: 0 0 pxToRem(40) 0;
+  position: relative;
+  z-index: 10;
+  &__item {
+    width: 100%;
+    @include tablet {
+      width: calc(50% - pxToRem(20));
+    }
+    @include desktop {
+      width: calc(25% - pxToRem(20));
+    }
+  }
+  &__title {
+    color: $color-accent;
+    font-size: pxToRem(24);
+    font-weight: 700;
+    position: relative;
+    &::before {
+      counter-increment: step-number;
+      content: counter(step-number);
+      position: absolute;
+      top: pxToRem(-35);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: pxToRem(-12);
+      left: 0;
+      width: 33.333%;
+      height: 2px;
+      background: $color-accent;
+    }
+  }
+  &__description {
+    color: $color-text-muted;
+    font-weight: 400;
+    line-height: 1.31;
+    font-size: pxToRem(16);
+  }
+}

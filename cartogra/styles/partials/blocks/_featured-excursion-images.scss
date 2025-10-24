@@ -1,0 +1,29 @@
+@use "../variables" as *;
+@use "../utils" as *;
+@use "../mixins" as *;
+
+.featured-excursion-images {
+  @extend %wrapper;
+  &__list {
+    @include reset-list();
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: pxToRem(32);
+  }
+  &__item {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    line-height: 0;
+    width: 100%;
+    text-align: left;
+    @include tablet {
+      width: calc(33.333% - pxToRem(32));
+    }
+  }
+  &__link {
+  }
+  &__image {
+  }
+}

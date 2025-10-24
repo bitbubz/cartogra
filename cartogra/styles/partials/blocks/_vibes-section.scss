@@ -1,0 +1,49 @@
+@use "../variables" as *;
+@use "../utils" as *;
+@use "../mixins" as *;
+
+.vibes-section {
+  background: linear-gradient(
+    $color-accent pxToRem(920),
+    $color-white pxToRem(920)
+  );
+  padding: pxToRem(32);
+  @include tablet {
+    padding: pxToRem(69);
+    background: linear-gradient(
+      $color-accent pxToRem(658),
+      $color-white pxToRem(658)
+    );
+  }
+  &__title {
+    @extend %wrapper;
+    color: $color-white;
+    font-family: "Literata", serif;
+    font-size: pxToRem(68);
+    font-weight: 500;
+    line-height: 1.06;
+    letter-spacing: pxToRem(-2.04);
+    text-align: center;
+    margin: 0 auto pxToRem(34) auto;
+  }
+  &__description {
+    @extend %wrapper;
+    color: $color-off-white;
+    font-size: pxToRem(16);
+    line-height: 1.312;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 auto pxToRem(64) auto;
+  }
+  &__subtitle {
+    color: $color-accent-light;
+    text-align: center;
+    font-size: pxToRem(24);
+    font-weight: 700;
+    line-height: normal;
+    margin: 0 0 pxToRem(64) 0;
+    @include tablet {
+      font-size: pxToRem(30);
+    }
+  }
+}

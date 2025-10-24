@@ -1,0 +1,96 @@
+@use "../variables" as *;
+@use "../utils" as *;
+@use "../mixins" as *;
+
+.featured-destinations {
+  @extend %wrapper;
+  text-align: center;
+  padding: 0 pxToRem(16);
+  margin-bottom: pxToRem(86);
+  @include tablet {
+    padding: 0;
+  }
+  &__intro-title {
+    font-family: "Literata", serif;
+    font-size: pxToRem(42);
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: pxToRem(-2.04);
+    color: $color-primary-dark;
+    @include tablet {
+      font-size: pxToRem(68);
+      line-height: 1.06;
+    }
+  }
+  &__intro-text {
+    color: $color-gray-dark;
+    font-size: pxToRem(16);
+    font-weight: 400;
+    line-height: 1.31;
+  }
+  &__image-grid {
+    margin: pxToRem(24) 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: pxToRem(32);
+    @include tablet {
+    }
+  }
+  &__link {
+    text-decoration: none;
+    display: inline-flex;
+    width: 100%;
+    @include tablet {
+      width: calc(33.333% - pxToRem(32));
+    }
+  }
+  &__image-card {
+    text-align: left;
+  }
+  &__image-wrapper {
+    position: relative;
+  }
+  &__image {
+    border-radius: 16px;
+    width: 100%;
+  }
+  &__title {
+    color: $color-accent;
+    font-size: pxToRem(24);
+    font-weight: 700;
+    margin: pxToRem(32) 0 pxToRem(8) 0;
+  }
+  &__description {
+    color: $color-gray-dark;
+    font-size: pxToRem(16);
+    line-height: 1.31;
+    margin: 0 0 pxToRem(8) 0;
+  }
+  &__price {
+    color: $color-text-dark;
+    font-size: pxToRem(22);
+    font-weight: 700;
+    margin: 0;
+  }
+  &__vibes-wrapper {
+    position: absolute;
+    bottom: pxToRem(26);
+    right: pxToRem(17);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: flex-end;
+    gap: pxToRem(16);
+  }
+  &__vibe {
+    display: inline-flex;
+    text-decoration: none;
+    color: $color-white;
+    font-size: pxToRem(14);
+    font-weight: 700;
+    border-radius: 32px;
+    padding: pxToRem(4) pxToRem(8);
+    background: $color-primary-dark;
+  }
+}

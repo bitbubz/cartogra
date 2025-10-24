@@ -1,0 +1,99 @@
+@use "../variables" as *;
+@use "../utils" as *;
+@use "../mixins" as *;
+
+.get-started-section {
+  @extend %wrapper;
+  max-width: pxToRem(1049);
+  margin-top: pxToRem(50);
+  margin-bottom: pxToRem(148);
+  &__title {
+    color: $color-accent;
+    font-size: pxToRem(32);
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0 0 pxToRem(25) 0;
+    @include tablet {
+      font-size: pxToRem(56);
+    }
+  }
+  &__description {
+    color: $color-gray-dark;
+    line-height: 1.312;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 0 pxToRem(50) 0;
+  }
+  &__list-wrapper {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+  &__list {
+    @include reset-list();
+    list-style: none;
+    width: auto;
+    margin: 0 0 0 pxToRem(115);
+    @include tablet {
+      width: 50%;
+    }
+  }
+  &__item {
+    position: relative;
+    &::before {
+      content: url("./../assets/icons/marker.svg");
+      position: absolute;
+      left: pxToRem(-75);
+      top: pxToRem(-10);
+      width: pxToRem(53);
+      height: pxToRem(53);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: $color-accent-2;
+      line-height: 0;
+      padding: pxToRem(14) pxToRem(16);
+      border-radius: 10px;
+    }
+    &--marker {
+      &::before {
+        content: url("./../assets/icons/marker.svg");
+      }
+    }
+    &--phone {
+      &::before {
+        content: url("./../assets/icons/phone.svg");
+      }
+    }
+    &--price-tag {
+      &::before {
+        content: url("./../assets/icons/price-tag.svg");
+      }
+    }
+  }
+  &__image {
+    width: 100%;
+    margin-bottom: pxToRem(16);
+    @include tablet {
+      width: 50%;
+    }
+  }
+  &__item-title {
+    color: $color-accent;
+    font-size: pxToRem(24);
+    font-weight: 700;
+    line-height: normal;
+    margin: pxToRem(10) 0 pxToRem(19) 0;
+  }
+  &__item-description {
+    color: $color-text-muted;
+    line-height: 1.312;
+    font-weight: 400;
+    font-size: pxToRem(16);
+    margin: 0;
+  }
+}
