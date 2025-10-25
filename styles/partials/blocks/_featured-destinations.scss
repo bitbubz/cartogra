@@ -6,7 +6,9 @@
   @extend %wrapper;
   text-align: center;
   padding: 0 pxToRem(16);
-  margin-bottom: pxToRem(86);
+  // margin-bottom: pxToRem(86);
+  
+
   @include tablet {
     padding: 0;
   }
@@ -28,59 +30,75 @@
     font-weight: 400;
     line-height: 1.31;
   }
+                            // build out your mobile first styling here
   &__image-grid {
     margin: pxToRem(24) 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: pxToRem(32);
+    
+    
     @include tablet {
     }
+
+    // @include desktop {
+    //   display: flex;
+    // flex-direction: column;
+    // width: 100%;
+    // }
   }
   &__link {
     text-decoration: none;
     display: inline-flex;
     width: 100%;
-    @include tablet {
-      width: calc(33.333% - pxToRem(32));
-    }
+    
+    // @include tablet {
+    //   width: calc(33.333% - pxToRem(32));
+    // }
+
+    // @include desktop {
+      
+    //   display: block;
+      
+    // }
   }
   &__image-card {
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    
   }
   &__image-wrapper {
-    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   
+
+
   }
   &__image {
-    border-radius: 16px;
-    width: 100%;
+    padding: 5px;
+    
+    width: 50%;
+    border-radius: 30px;
+    
   }
+
+    &__text {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    
+  } 
   &__title {
     color: $color-accent;
     font-size: pxToRem(24);
     font-weight: 700;
     margin: pxToRem(32) 0 pxToRem(8) 0;
   }
-  &__description {
-    color: $color-gray-dark;
-    font-size: pxToRem(16);
-    line-height: 1.31;
-    margin: 0 0 pxToRem(8) 0;
-  }
-  &__price {
-    color: $color-text-dark;
-    font-size: pxToRem(22);
-    font-weight: 700;
-    margin: 0;
-  }
-  &__vibes-wrapper {
-    position: absolute;
-    bottom: pxToRem(26);
-    right: pxToRem(17);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    align-content: flex-end;
+
+ &__vibes-wrapper {
+    
     gap: pxToRem(16);
   }
   &__vibe {
@@ -93,4 +111,37 @@
     padding: pxToRem(4) pxToRem(8);
     background: $color-primary-dark;
   }
+
+  &__price {
+    
+    color: $color-text-dark;
+    font-size: pxToRem(22);
+    font-weight: 700;
+    margin: 0;
+  }
+
+  &__description {
+    text-align: left;
+    color: $color-gray-dark;
+    font-size: pxToRem(16);
+    line-height: 1.31;
+    margin: 0 0 pxToRem(8) 0;
+  }
+  
+  &__button {
+    display: inline-flex;
+    text-decoration: none;
+    color: $color-white;
+    font-size: pxToRem(14);
+    font-weight: normal;
+    border-radius: 5px;
+    border-style: none;
+    padding: pxToRem(6) pxToRem(12);
+    background: $color-primary-dark;
+    position: relative;
+    right: -30px;
+
+  }
+
+ 
 }
