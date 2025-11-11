@@ -1,327 +1,440 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cartogra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cartogra</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="./styles/main.css" />
+  <body class="body">
+    <header class="site-header">
+      <div class="site-header__wrapper">
+        <a href="/">
+          <img src="./assets/logos/cartogra.svg" alt="" />
+        </a>
+        <nav class="primary-nav">
+          <ul class="primary-nav__list">
+            <li class="primary-nav__item">
+              <a class="primary-nav__link" href="./pages/vibes.html"
+                >Travel Vibes</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
+    <section class="hero">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        poster="./assets/images/hero-video.jpg"
+        class="hero__video"
+      >
+        <source src="./assets/videos/hero-video.mp4" type="video/mp4" />
+      </video>
 
-</head>
+      <h1 class="hero__title">Where do you feel today?</h1>
 
-<body class="body">
-  <header class="site-header">
-    <div class="site-header__wrapper">
-      <a href="/">
-        <img src="./assets/logos/cartogra.svg" alt="" />
-      </a>
-      <nav class="primary-nav">
-        <ul class="primary-nav__list">
-          <li class="primary-nav__item">
-            <a class="primary-nav__link" href="./pages/vibes.html">Travel Vibes</a>
+      <div class="hero__content">
+        <p class="hero__description">
+          Whether you're craving a soul-soothing escape, a spontaneous thrill,
+          or a total cultural immersion, Cartogra curates personalized
+          itineraries and experiences that align with your mood and energy. Just
+          tell us your vibe and we’ll take care of the rest.
+        </p>
+
+        <ol class="steps-list">
+          <li class="steps-list__item">
+            <h3 class="steps-list__title">Choose the vibe for your trip</h3>
+            <p class="steps-list__description">
+              We create curated experiences that match your mood, whether you're
+              craving adventure, relaxation, or something in between.
+            </p>
           </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+          <li class="steps-list__item">
+            <h3 class="steps-list__title">Get suggested destinations</h3>
+            <p class="steps-list__description">
+              We provide personalized destinations and excursions tailored to
+              your unique travel style, as well as your duration, and budget.
+            </p>
+          </li>
+          <li class="steps-list__item">
+            <h3 class="steps-list__title">Customize the details</h3>
+            <p class="steps-list__description">
+              We offer the ability to fine-tune every aspect of your trip from
+              your lodging to your itinerary, so it fits your style perfectly.
+            </p>
+          </li>
+          <li class="steps-list__item">
+            <h3 class="steps-list__title">Start the countdown</h3>
+            <p class="steps-list__description">
+              We help you build anticipation and excitement with our suggested
+              add-ons, custom mood boards, packing lists, and travel tips.
+            </p>
+          </li>
+        </ol>
+        <a class="cta" href="/pages/vibes.html">Browse by vibe</a>
+      </div>
+    </section>
 
-  <section class="hero">
-    <video autoplay muted loop playsinline poster="./assets/images/hero-video.jpg" class="hero__video">
-      <source src="./assets/videos/hero-video.mp4" type="video/mp4" />
-    </video>
-
-    <h1 class="hero__title">Where do you feel today?</h1>
-
-    <div class="hero__content">
-      <p class="hero__description">
-        Whether you're craving a soul-soothing escape, a spontaneous thrill,
-        or a total cultural immersion, Cartogra curates personalized
-        itineraries and experiences that align with your mood and energy. Just
-        tell us your vibe and we’ll take care of the rest.
+    <section class="featured-destinations">
+      <h2 class="featured-destinations__intro-title">Featured destinations</h2>
+      <p class="featured-destinations__intro-text">
+        From sun-soaked beaches to hidden mountain retreats, these hand-picked
+        destinations are waiting to be explored.
       </p>
 
-      <ol class="steps-list">
-        <li class="steps-list__item">
-          <h3 class="steps-list__title">Choose the vibe for your trip</h3>
-          <p class="steps-list__description">
-            We create curated experiences that match your mood, whether you're
-            craving adventure, relaxation, or something in between.
-          </p>
-        </li>
-        <li class="steps-list__item">
-          <h3 class="steps-list__title">Get suggested destinations</h3>
-          <p class="steps-list__description">
-            We provide personalized destinations and excursions tailored to
-            your unique travel style, as well as your duration, and budget.
-          </p>
-        </li>
-        <li class="steps-list__item">
-          <h3 class="steps-list__title">Customize the details</h3>
-          <p class="steps-list__description">
-            We offer the ability to fine-tune every aspect of your trip from
-            your lodging to your itinerary, so it fits your style perfectly.
-          </p>
-        </li>
-        <li class="steps-list__item">
-          <h3 class="steps-list__title">Start the countdown</h3>
-          <p class="steps-list__description">
-            We help you build anticipation and excitement with our suggested
-            add-ons, custom mood boards, packing lists, and travel tips.
-          </p>
-        </li>
-      </ol>
-      <a class="cta" href="/pages/vibes.html">Browse by vibe</a>
-    </div>
-  </section>
+      <div class="featured-destinations__image-grid">
+        <!-- start of destinations grid __________________ -->
 
-  <section class="featured-destinations">
-    <h2 class="featured-destinations__intro-title">Featured destinations</h2>
-    <p class="featured-destinations__intro-text">
-      From sun-soaked beaches to hidden mountain retreats, these hand-picked
-      destinations are waiting to be explored.
-    </p>
+        <!--amalfi coast card 1-->
+        <article class="featured-destinations__image-card">
+          <div class="featured-destinations__image-wrapper">
+            <img
+              class="featured-destinations__image-wrapper__main-image"
+              src="./new_assets/images/amalfi-coast-1.jpg"
+              alt=""
+            />
 
-
-    <div class="featured-destinations__image-grid"> <!-- start of destinations grid __________________ -->
-
-      <!--amalfi coast card 1-->
-      <article class="featured-destinations__image-card">
-        <div class="featured-destinations__image-wrapper">
-          <img class="featured-destinations__image-wrapper__main-image  " src="./new_assets/images/amalfi-coast-1.jpg"
-            alt="" />
-
-          <img class="featured-destinations__image-wrapper__image" src="./new_assets/images/amalfi-coast-2.jpg"
-            alt="" />
-          <img class="featured-destinations__image-wrapper__image" src="./new_assets/images/amalfi-coast-3.jpg"
-            alt="" />
-          <img class="featured-destinations__image-wrapper__image" src="./new_assets/images/amalfi-coast-4.jpg"
-            alt="" />
-
-
-        </div>
-        <div class="featured-destinations__text">
-          <img class="featured-destinations__text__image featured-destinations__text__main-image " src="./new_assets/images/amalfi-coast-1.jpg" alt="" />
-          <img class="featured-destinations__text__image " src="./new_assets/images/amalfi-coast-2.jpg" alt="" />
-          <img class="featured-destinations__text__image " src="./new_assets/images/amalfi-coast-3.jpg" alt="" />
-          <img class="featured-destinations__text__image " src="./new_assets/images/amalfi-coast-4.jpg" alt="" />
-
-          <h3 class="featured-destinations__title">
-            Amalfi Coast, Italy
-          </h3>
-          <div class="featured-destinations__vibes-wrapper">
-            <!-- <a href=""><div class="featured-destinations__vibe">Excitement</div></a> -->
-            <div class="featured-destinations__vibe">Romance</div>
-            <div class="featured-destinations__vibe">Escape</div>
+            <img
+              class="featured-destinations__image-wrapper__image"
+              src="./new_assets/images/amalfi-coast-2.jpg"
+              alt=""
+            />
+            <img
+              class="featured-destinations__image-wrapper__image"
+              src="./new_assets/images/amalfi-coast-3.jpg"
+              alt=""
+            />
+            <img
+              class="featured-destinations__image-wrapper__image"
+              src="./new_assets/images/amalfi-coast-4.jpg"
+              alt=""
+            />
           </div>
+          <div class="featured-destinations__text">
+            <img
+              class="featured-destinations__text__image featured-destinations__text__main-image"
+              src="./new_assets/images/amalfi-coast-1.jpg"
+              alt=""
+            />
+            <img
+              class="featured-destinations__text__image"
+              src="./new_assets/images/amalfi-coast-2.jpg"
+              alt=""
+            />
+            <img
+              class="featured-destinations__text__image"
+              src="./new_assets/images/amalfi-coast-3.jpg"
+              alt=""
+            />
+            <img
+              class="featured-destinations__text__image"
+              src="./new_assets/images/amalfi-coast-4.jpg"
+              alt=""
+            />
 
-          <p class="featured-destinations__price">From $3,100</p>
-          <p class="featured-destinations__description">
-            <strong>6 days</strong> of sundrenched coastlines, cliffside villages, and refreshing limoncello spritzes
-            overlooking
-            the sea.
-          </p>
+            <h3 class="featured-destinations__title">Amalfi Coast, Italy</h3>
+            <div class="featured-destinations__vibes-wrapper">
+              <!-- <a href=""><div class="featured-destinations__vibe">Excitement</div></a> -->
+              <div class="featured-destinations__vibe">Romance</div>
+              <div class="featured-destinations__vibe">Escape</div>
+            </div>
 
-          <a>
-            <button class="featured-destinations__button">VIEW MORE INFORMATION</button>
-          </a>
-        </div>
-      </article>
+            <p class="featured-destinations__price">From $3,100</p>
+            <p class="featured-destinations__description">
+              <strong>6 days</strong> of sundrenched coastlines, cliffside
+              villages, and refreshing limoncello spritzes overlooking the sea.
+            </p>
 
-
-      <!-- card 2-->
-
-      <article class="featured-destinations__image-card">
-        <div class="featured-destinations__image-wrapper">
-          <img class="featured-destinations__image-wrapper__main-image"  src="./new_assets/images/kyoto-1.jpg" alt="" />
-          <img class="featured-destinations__image-wrapper__image" src="./new_assets/images/kyoto-2.jpg" alt="" />
-          <img class="featured-destinations__image-wrapper__image" src="./new_assets/images/kyoto-3.jpg" alt="" />
-          <img class="featured-destinations__image-wrapper__image" src="./new_assets/images/kyoto-4.jpg" alt="" />
-
-        </div>
-        <div class="featured-destinations__text">
-           <img class="featured-destinations__text__image featured-destinations__text__main-image" src="./new_assets/images/kyoto-1.jpg" alt="" />
-          <img class="featured-destinations__text__image" src="./new_assets/images/kyoto-2.jpg" alt="" />
-          <img class="featured-destinations__text__image" src="./new_assets/images/kyoto-3.jpg" alt="" />
-          <img class="featured-destinations__text__image" src="./new_assets/images/kyoto-4.jpg" alt="" />
-          <h3 class="featured-destinations__title">
-            Kyoto, Japan
-          </h3>
-          <div class="featured-destinations__vibes-wrapper">
-            <div class="featured-destinations__vibe">Excitement</div>
-            <div class="featured-destinations__vibe">Family</div>
-          </div>
-
-          <p class="featured-destinations__price">From $3,200</p>
-          <p class="featured-destinations__description">
-            <strong>7 days</strong> of temple bells, ancient beauty, and serene rituals.
-            Wander from Zen gardens to bamboo forests in Japan's cultural heart.
-          </p>
-
-          <a>
-            <button class="featured-destinations__button">VIEW MORE INFORMATION</button>
-          </a>
-        </div>
-      </article>
-
-      <!-- card 3-->
-
-      <article class="featured-destinations__image-card">
-        <div class="featured-destinations__image-wrapper">
-          <img class="featured-destinations__image-wrapper__main-image" src="./new_assets/images/iceland-1.jpg" alt="" />
-          <img class="featured-destinations__image-wrapper__image" src="./new_assets/images/iceland-2.jpg" alt="" />
-          <img class="featured-destinations__image-wrapper__image" src="./new_assets/images/iceland-3.jpg" alt="" />
-          <img class="featured-destinations__image-wrapper__image" src="./new_assets/images/iceland-4.jpg" alt="" />
-
-        </div>
-        <div class="featured-destinations__text">
-           <img class="featured-destinations__text__image featured-destinations__text__main-image" src="./new_assets/images/iceland-1.jpg" alt="" />
-          <img class="featured-destinations__text__image" src="./new_assets/images/iceland-2.jpg" alt="" />
-          <img class="featured-destinations__text__image"src="./new_assets/images/iceland-3.jpg" alt="" />
-          <img class="featured-destinations__text__image" src="./new_assets/images/iceland-4.jpg" alt="" />
-          <h3 class="featured-destinations__title">
-            Reykjavik, Iceland
-          </h3>
-          <div class="featured-destinations__vibes-wrapper">
-            <div class="featured-destinations__vibe">Excitement</div>
-            <div class="featured-destinations__vibe">Relaxation</div>
-            <div class="featured-destinations__vibe">Nature</div>
-            <div class="featured-destinations__vibe">Family</div>
-          </div>
-
-          <p class="featured-destinations__price">From $2,900</p>
-          <p class="featured-destinations__description">
-            <strong>7 days</strong> of geothermal relaxation and surreal landscapes - experience
-            Iceland's capital, its wild frontiers, and the magic of the Northern Lights.
-          </p>
-
-          <a>
-            <button class="featured-destinations__button">VIEW MORE INFORMATION</button>
-          </a>
-        </div>
-      </article>
-
-
-    </div>
-  </section>
-
-  <section class="banner">
-    <div class="banner__wrapper">
-      <div class="banner__text-wrapper">
-        <h2 class="banner__title">Travel by vibe, not by guesswork.</h2>
-        <p class="banner__description">
-          Cartogra helps you choose your next destination based on how you
-          want to feel—whether that’s adventurous, relaxed, romantic, or
-          inspired. We blend smart recommendations with human curation to
-          guide you to places, activities, and excursions that match your
-          mood, not just your map.
-        </p>
-        <a class="cta" href="#">About us</a>
-      </div>
-    </div>
-    <img class="banner__image" src="./assets/images/airplane-wing.jpg" alt="" />
-  </section>
-
-  <footer class="site-footer">
-    <div class="site-footer__wrapper">
-      <section class="site-footer__top-section">
-        <div class="site-footer__links-wrapper">
-          <div>
-            <h3 class="site-footer__title">Travel Vibes</h3>
-            <ul class="site-footer__list">
-              <li class="site-footer__item">
-                <a class="site-footer__link" href="/pages/vibes.html">Browse by Vibe</a>
-              </li>
-              <li class="site-footer__item">
-                <a class="site-footer__link" href="#">Browse Map</a>
-              </li>
-              <li class="site-footer__item">
-                <a class="site-footer__link" href="#">Search</a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="site-footer__title">Destinations</h3>
-            <ul class="site-footer__list">
-              <li class="site-footer__item">
-                <a class="site-footer__link" href="#">Travel Packages</a>
-              </li>
-              <li class="site-footer__item">
-                <a class="site-footer__link" href="#">Destinations</a>
-              </li>
-              <li class="site-footer__item">
-                <a class="site-footer__link" href="#">Excursions</a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="site-footer__title">About Us</h3>
-            <ul class="site-footer__list">
-              <li class="site-footer__item">
-                <a class="site-footer__link" href="#">Our Story</a>
-              </li>
-              <li class="site-footer__item">
-                <a class="site-footer__link" href="#">Our Approach</a>
-              </li>
-              <li class="site-footer__item">
-                <a class="site-footer__link" href="#">Our Team</a>
-              </li>
-              <li class="site-footer__item">
-                <a class="site-footer__link" href="#">Press & Media Kit</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="site-footer__about-wrapper">
-          <img src="./assets/logos/cartogra.svg" alt="" />
-          <p>
-            Find your place by how you want to feel. We match destinations to
-            your mood whether it be adventure, calm, connection, or wonder.
-            Simple, intuitive, and curated for the vibe you're after.
-          </p>
-        </div>
-      </section>
-
-      <section class="site-footer__bottom-section">
-        <ul class="site-footer__list site-footer__list--social">
-          <li class="site-footer__item">
-            <a class="site-footer__link" href="#">
-              <img src="./assets/icons/tiktok.svg" alt="" />
+            <a>
+              <button class="featured-destinations__button">
+                VIEW MORE INFORMATION
+              </button>
             </a>
-          </li>
-          <li class="site-footer__item">
-            <a class="site-footer__link" href="#"><img src="./assets/icons/facebook.svg" alt="" /></a>
-          </li>
-          <li class="site-footer__item">
-            <a class="site-footer__link" href="#"><img src="./assets/icons/instagram.svg" alt="" /></a>
-          </li>
-          <li class="site-footer__item">
-            <a class="site-footer__link" href="#"><img src="./assets/icons/x.svg" alt="" /></a>
-          </li>
-        </ul>
-        <p>Copyright &copy;2025 Cartogra LLC. All rights reserved.</p>
-        <ul class="site-footer__list site-footer__list--terms">
-          <li class="site-footer__item">
-            <a class="site-footer__link" href="#">Terms</a>
-          </li>
-          <li class="site-footer__item">
-            <a class="site-footer__link" href="#">Privacy Policy</a>
-          </li>
-          <li class="site-footer__item">
-            <a class="site-footer__link" href="#">Compliance</a>
-          </li>
-        </ul>
-      </section>
-    </div>
-  </footer>
-</body>
+            <a href="./enrollment.html">
+              <button class="featured-destinations__button">LET'S GO!</button>
+            </a>
+          </div>
+        </article>
 
+        <!-- card 2-->
+
+        <article class="featured-destinations__image-card">
+          <div class="featured-destinations__image-wrapper">
+            <img
+              class="featured-destinations__image-wrapper__main-image"
+              src="./new_assets/images/kyoto-1.jpg"
+              alt=""
+            />
+            <img
+              class="featured-destinations__image-wrapper__image"
+              src="./new_assets/images/kyoto-2.jpg"
+              alt=""
+            />
+            <img
+              class="featured-destinations__image-wrapper__image"
+              src="./new_assets/images/kyoto-3.jpg"
+              alt=""
+            />
+            <img
+              class="featured-destinations__image-wrapper__image"
+              src="./new_assets/images/kyoto-4.jpg"
+              alt=""
+            />
+          </div>
+          <div class="featured-destinations__text">
+            <img
+              class="featured-destinations__text__image featured-destinations__text__main-image"
+              src="./new_assets/images/kyoto-1.jpg"
+              alt=""
+            />
+            <img
+              class="featured-destinations__text__image"
+              src="./new_assets/images/kyoto-2.jpg"
+              alt=""
+            />
+            <img
+              class="featured-destinations__text__image"
+              src="./new_assets/images/kyoto-3.jpg"
+              alt=""
+            />
+            <img
+              class="featured-destinations__text__image"
+              src="./new_assets/images/kyoto-4.jpg"
+              alt=""
+            />
+            <h3 class="featured-destinations__title">Kyoto, Japan</h3>
+            <div class="featured-destinations__vibes-wrapper">
+              <div class="featured-destinations__vibe">Excitement</div>
+              <div class="featured-destinations__vibe">Family</div>
+            </div>
+
+            <p class="featured-destinations__price">From $3,200</p>
+            <p class="featured-destinations__description">
+              <strong>7 days</strong> of temple bells, ancient beauty, and
+              serene rituals. Wander from Zen gardens to bamboo forests in
+              Japan's cultural heart.
+            </p>
+
+            <a>
+              <button class="featured-destinations__button">
+                VIEW MORE INFORMATION
+              </button>
+            </a>
+            <a href="./enrollment.html">
+              <button class="featured-destinations__button">LET'S GO!</button>
+            </a>
+          </div>
+        </article>
+
+        <!-- card 3-->
+
+        <article class="featured-destinations__image-card">
+          <div class="featured-destinations__image-wrapper">
+            <img
+              class="featured-destinations__image-wrapper__main-image"
+              src="./new_assets/images/iceland-1.jpg"
+              alt=""
+            />
+            <img
+              class="featured-destinations__image-wrapper__image"
+              src="./new_assets/images/iceland-2.jpg"
+              alt=""
+            />
+            <img
+              class="featured-destinations__image-wrapper__image"
+              src="./new_assets/images/iceland-3.jpg"
+              alt=""
+            />
+            <img
+              class="featured-destinations__image-wrapper__image"
+              src="./new_assets/images/iceland-4.jpg"
+              alt=""
+            />
+          </div>
+          <div class="featured-destinations__text">
+            <img
+              class="featured-destinations__text__image featured-destinations__text__main-image"
+              src="./new_assets/images/iceland-1.jpg"
+              alt=""
+            />
+            <img
+              class="featured-destinations__text__image"
+              src="./new_assets/images/iceland-2.jpg"
+              alt=""
+            />
+            <img
+              class="featured-destinations__text__image"
+              src="./new_assets/images/iceland-3.jpg"
+              alt=""
+            />
+            <img
+              class="featured-destinations__text__image"
+              src="./new_assets/images/iceland-4.jpg"
+              alt=""
+            />
+            <h3 class="featured-destinations__title">Reykjavik, Iceland</h3>
+            <div class="featured-destinations__vibes-wrapper">
+              <div class="featured-destinations__vibe">Excitement</div>
+              <div class="featured-destinations__vibe">Relaxation</div>
+              <div class="featured-destinations__vibe">Nature</div>
+              <div class="featured-destinations__vibe">Family</div>
+            </div>
+
+            <p class="featured-destinations__price">From $2,900</p>
+            <p class="featured-destinations__description">
+              <strong>7 days</strong> of geothermal relaxation and surreal
+              landscapes - experience Iceland's capital, its wild frontiers, and
+              the magic of the Northern Lights.
+            </p>
+
+            <a>
+              <button class="featured-destinations__button">
+                VIEW MORE INFORMATION
+              </button>
+            </a>
+            <a href="./enrollment.html">
+              <button class="featured-destinations__button">LET'S GO!</button>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="banner">
+      <div class="banner__wrapper">
+        <div class="banner__text-wrapper">
+          <h2 class="banner__title">Travel by vibe, not by guesswork.</h2>
+          <p class="banner__description">
+            Cartogra helps you choose your next destination based on how you
+            want to feel—whether that’s adventurous, relaxed, romantic, or
+            inspired. We blend smart recommendations with human curation to
+            guide you to places, activities, and excursions that match your
+            mood, not just your map.
+          </p>
+          <a class="cta" href="#">About us</a>
+        </div>
+      </div>
+      <img
+        class="banner__image"
+        src="./assets/images/airplane-wing.jpg"
+        alt=""
+      />
+    </section>
+
+    <footer class="site-footer">
+      <div class="site-footer__wrapper">
+        <section class="site-footer__top-section">
+          <div class="site-footer__links-wrapper">
+            <div>
+              <h3 class="site-footer__title">Travel Vibes</h3>
+              <ul class="site-footer__list">
+                <li class="site-footer__item">
+                  <a class="site-footer__link" href="/pages/vibes.html"
+                    >Browse by Vibe</a
+                  >
+                </li>
+                <li class="site-footer__item">
+                  <a class="site-footer__link" href="#">Browse Map</a>
+                </li>
+                <li class="site-footer__item">
+                  <a class="site-footer__link" href="#">Search</a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="site-footer__title">Destinations</h3>
+              <ul class="site-footer__list">
+                <li class="site-footer__item">
+                  <a class="site-footer__link" href="#">Travel Packages</a>
+                </li>
+                <li class="site-footer__item">
+                  <a class="site-footer__link" href="#">Destinations</a>
+                </li>
+                <li class="site-footer__item">
+                  <a class="site-footer__link" href="#">Excursions</a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="site-footer__title">About Us</h3>
+              <ul class="site-footer__list">
+                <li class="site-footer__item">
+                  <a class="site-footer__link" href="#">Our Story</a>
+                </li>
+                <li class="site-footer__item">
+                  <a class="site-footer__link" href="#">Our Approach</a>
+                </li>
+                <li class="site-footer__item">
+                  <a class="site-footer__link" href="#">Our Team</a>
+                </li>
+                <li class="site-footer__item">
+                  <a class="site-footer__link" href="#">Press & Media Kit</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="site-footer__about-wrapper">
+            <img src="./assets/logos/cartogra.svg" alt="" />
+            <p>
+              Find your place by how you want to feel. We match destinations to
+              your mood whether it be adventure, calm, connection, or wonder.
+              Simple, intuitive, and curated for the vibe you're after.
+            </p>
+          </div>
+        </section>
+
+        <section class="site-footer__bottom-section">
+          <ul class="site-footer__list site-footer__list--social">
+            <li class="site-footer__item">
+              <a class="site-footer__link" href="#">
+                <img src="./assets/icons/tiktok.svg" alt="" />
+              </a>
+            </li>
+            <li class="site-footer__item">
+              <a class="site-footer__link" href="#"
+                ><img src="./assets/icons/facebook.svg" alt=""
+              /></a>
+            </li>
+            <li class="site-footer__item">
+              <a class="site-footer__link" href="#"
+                ><img src="./assets/icons/instagram.svg" alt=""
+              /></a>
+            </li>
+            <li class="site-footer__item">
+              <a class="site-footer__link" href="#"
+                ><img src="./assets/icons/x.svg" alt=""
+              /></a>
+            </li>
+          </ul>
+          <p>Copyright &copy;2025 Cartogra LLC. All rights reserved.</p>
+          <ul class="site-footer__list site-footer__list--terms">
+            <li class="site-footer__item">
+              <a class="site-footer__link" href="#">Terms</a>
+            </li>
+            <li class="site-footer__item">
+              <a class="site-footer__link" href="#">Privacy Policy</a>
+            </li>
+            <li class="site-footer__item">
+              <a class="site-footer__link" href="#">Compliance</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </footer>
+  </body>
 </html>
