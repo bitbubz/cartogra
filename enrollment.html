@@ -4,14 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-   <script src="./index.js" defer></script> 
+   <script type='module' src="./index.js" defer></script> 
+  
+<link rel="stylesheet" href="./styles/main.css" />
 </head>
 <body>
     <h1>Enroll!</h1>
     <form id="enrollment">
-<input type="" name="destination">
+<label for="first_name">First Name</label>
+<input type="text" id='first_name' name="first_name" placeholder="Type first name"></input>
+<label for="last_name">Last Name</label>
+<input type="text" id='last_name' name="last_name" placeholder="Type last name"></input>
+<label for="email">Email</label>
+<input type="'email"  id='email' placeholder="Type email address"></input>
+<label for="'phone">Phone</label>
+<input type="phone" id='phone' name="'phone" placeholder="Type phone number"></input>
+<div id="destination_form"><label for="destination">Destination</label></div>
+
+<input type="checkbox" name="checkbox" id="checkbox">
+<label for="checkbox">
+    I agree to be contacted by the Cartogra Travel Team to begin the process
+    of planning my trip. This does not mean i am obligated to book a trip through Cartogra
+    or at all. No payment information is being collected at this time.
+</label>
+<button type="submit" value="Submit">Submit Form</button>
+
+
 
 </input>
 </form>
+<div id="errorBox" style="display: none;">
+  <p id="errorMessage"></p>
+  <button id='errorCloseButton' >Close</button>
+</div>
 </body>
 </html>
