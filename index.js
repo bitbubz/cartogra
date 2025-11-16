@@ -3,6 +3,7 @@ import axios from "https://esm.sh/axios@1.7.7";
 const destinationArea = document.getElementById("destination_form");
 const dropDown = document.createElement("select");
 dropDown.id = "destination";
+dropDown.name = "destination";
 destinationArea.appendChild(dropDown);
 
 const option = document.createElement("option");
@@ -80,24 +81,62 @@ destinations.forEach((element, array) => {
 });
 
 async function formSubmit(e) {
+  console.log(e.target);
   const formData = new FormData(e.target);
-  const data = Object.fromEntries(formData.entries());
+
+  const data = {
+    first_name: "",
+    last_name: "",
+    email: "",
+    phone: 0,
+    destination: "",
+  };
+
+  data.first_name = formData.get("first_name");
+  data.last_name = formData.get("last_name");
+  data.email = formData.get("email");
+  data.phone = parseInt(formData.get("phone"));
+  data.destination = formData.get("destination");
+
   console.log(data);
+
   const postRes = await axios.post("http://localhost:3000/users", data);
 
   const getRes = await axios.get("http://localhost:3000/users");
 
-  // setTimeout(redirect('confirmation.html'), 2000)
+  setTimeout(redirect("confirmation.html"), 2000);
 }
 
 const enrollmentForm = document.getElementById("enrollment");
 enrollmentForm.addEventListener("submit", function (e) {
   e.preventDefault();
-const message = document.getElementById("errorMessage").innerHTML ='You must include a '
-
+  const message = (document.getElementById("errorMessage").innerHTML =
+    "You must include a ");
 
   handleSubmitAttempt(e);
 });
+const phone = document.getElementById("phone");
+phone.addEventListener("keyup", phoneError);
+
+function phoneError () {
+  const regex = /^[0-9]+$/;
+const arrayofErrors = [];
+console.log(phone.value.length, 'regex test resut:', regex.test(phone.value))
+  if (
+    (phone.value.length < 10) || !regex.test(phone.value))
+      {
+    
+    const message = (document.getElementById("errorMessage").innerHTML =
+    "You must include a ");
+    console.log('problem')
+    arrayofErrors.push(phone.id);
+    showErrorBox(arrayofErrors)
+  }
+  else {
+    document.getElementById("errorBox").style.display = "none";
+   
+  }
+}
 
 function handleSubmitAttempt(e) {
   const firstName = document.getElementById("first_name");
@@ -105,24 +144,19 @@ function handleSubmitAttempt(e) {
   const email = document.getElementById("email");
   const phone = document.getElementById("phone");
   const destination = document.getElementById("destination");
- const arrayofErrors = [];
+  const arrayofErrors = [];
   const arrayOfValues = [firstName, lastName, email, phone, destination];
- 
-  for (let i = 0; i < arrayOfValues.length; i++) {
-    console.log(
-      `length of ${arrayOfValues[i].id} is:`,
-      arrayOfValues[i].value.length
-    );
 
+  for (let i = 0; i < arrayOfValues.length; i++) {
     if (arrayOfValues[i].value.length <= 0) {
       arrayOfValues[i].classList.add("error");
 
       arrayofErrors.push(arrayOfValues[i].id);
     }
   }
-  
+
   if (arrayofErrors.length == 0) {
-    console.log('submitted')
+    console.log("submitted");
     formSubmit(e);
   } else {
     showErrorBox(arrayofErrors);
@@ -134,8 +168,9 @@ function handleSubmitAttempt(e) {
 }
 
 function redirect(targetpage) {
-  const currentPage = encodeURI(window.location.href);
-  window.location.href = `${targetpage}?source=${currentPage}`;
+  console.log("redirect");
+  // const currentPage = encodeURI(window.location.href);
+  // window.location.href = `${targetpage}?source=${currentPage}`;
 }
 
 function showErrorBox(array) {
@@ -152,8 +187,10 @@ function showErrorBox(array) {
         message = "Last Name";
         break;
       case "phone":
-        message = "Phone Number";
+        message = "complete Phone Number";
+
         break;
+
       case "email":
         message = "Email";
         break;
@@ -164,12 +201,12 @@ function showErrorBox(array) {
     if (i !== 0 && i !== array.length - 1) {
       message = ", " + message;
     }
-    if (i == array.length - 1) {
+    if (i == array.length - 1 && array.length > 1) {
       message = "and " + message;
     }
 
     console.log(errorBox.innerHTML);
-    
+
     errorBox.innerHTML = errorBox.innerHTML + ` ${message}`;
   }
 
