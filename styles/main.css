@@ -1052,4 +1052,32 @@ img {
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1000; /* Ensure it appears on top */
+}
+
+.confirmation-page__header {
+  background-color: #004f62;
+}
+.confirmation-page__hero {
+  background-image: url("../../../assets/images/contact-page-banner.jpg");
+  background-size: cover;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.confirmation-page__hero__h1 {
+  color: white;
+}
+.confirmation-page__hero__p {
+  color: white;
+}
+.confirmation-page__form-page {
+  padding-top: 30px;
+  background-color: #0c7577;
+  justify-content: flex-start;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 1000px;
 }/*# sourceMappingURL=main.css.map */

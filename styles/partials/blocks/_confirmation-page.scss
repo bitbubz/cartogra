@@ -1,6 +1,42 @@
 @use "../mixins" as *;
 @use "../variables" as *;
 
+.confirmation-page {
+  &__header {
+    background-color: $color-primary-dark;
+  }
 
+  &__hero {
+    background-image: url("../../../assets/images/contact-page-banner.jpg");
+    background-size: cover;
+
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    &__h1 {
+      color: white;
+    }
+
+    &__p {
+      color: white;
+    }
+  }
+
+  &__form-page {
+    padding-top: 30px;
+    background-color: $color-accent;
+    justify-content: flex-start;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+    height: 1000px;
+
+  }
+
+}
 
 
