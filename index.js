@@ -123,12 +123,12 @@ function phoneError () {
 const arrayofErrors = [];
 console.log(phone.value.length, 'regex test resut:', regex.test(phone.value))
   if (
-    (phone.value.length < 10) || !regex.test(phone.value))
+    (phone.value.length < 10 || phone.value.length > 10) || !regex.test(phone.value))
       {
     
     const message = (document.getElementById("errorMessage").innerHTML =
     "You must include a ");
-    console.log('problem')
+    
     arrayofErrors.push(phone.id);
     showErrorBox(arrayofErrors)
   }
@@ -169,8 +169,8 @@ function handleSubmitAttempt(e) {
 
 function redirect(targetpage) {
   console.log("redirect");
-  // const currentPage = encodeURI(window.location.href);
-  // window.location.href = `${targetpage}?source=${currentPage}`;
+  const currentPage = encodeURI(window.location.href);
+  window.location.href = `${targetpage}?source=${currentPage}`;
 }
 
 function showErrorBox(array) {
@@ -223,10 +223,4 @@ function hideErrorBox(arrayOfValues) {
   const myForm = document.getElementById("enrollment");
   myForm.reset();
 }
-// document.getElementById('errorCloseButton').addEventListener('click',function hideErrorBox () {
-//   const box = document.getElementById('errorBox')
-//   box.style.display = "none";
-//   console.log(box)
-//   document.getElementById('first_name').innerHTML ='please write a name'
 
-// })

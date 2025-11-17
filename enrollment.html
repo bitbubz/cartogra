@@ -9,8 +9,19 @@
 <link rel="stylesheet" href="./styles/main.css" />
 </head>
 <body>
-    <h1>Enroll!</h1>
-    <form id="enrollment">
+    <header class="enrollment-page__header">
+        <img src="./assets/logos/cartogra.svg">
+    </header>
+
+    <div class='enrollment-page__hero'>
+            <h1 class="enrollment-page__hero__h1">Stop planning. Start packing.</h1>
+            <p class="enrollment-page__hero__p">Just fill out the form below and one of our Travel Team members will reach 
+                out to start booking your trip.
+            </p>
+    </div>
+    
+    <section class="enrollment-page__form-page">
+    <form id="enrollment" class="enrollment-page__form-page__form">
 <label for="first_name">First Name</label>
 <input type="text" id='first_name' name="first_name" placeholder="Type first name"></input>
 <label for="last_name">Last Name</label>
@@ -19,10 +30,10 @@
 <input type="'email"  id='email' name="email" placeholder="Type email address"></input>
 <label for="'phone">Type a 10 digit phone number, no dashes</label>
 <input type="phone" id='phone' name="phone" placeholder="phone number"></input>
-<div id="destination_form"><label for="destination">Destination</label></div>
+<div id="destination_form" class="enrollment-page__form-page__form__destination_form"><label for="destination">Destination</label></div>
 
 <input type="checkbox" name="checkbox" id="checkbox">
-<label for="checkbox">
+<label for="checkbox" class="enrollment-page__form-page__form__checkbox">
     I agree to be contacted by the Cartogra Travel Team to begin the process
     of planning my trip. This does not mean i am obligated to book a trip through Cartogra
     or at all. No payment information is being collected at this time.
@@ -37,5 +48,6 @@
   <p id="errorMessage"></p>
   <button id='errorCloseButton' >Close</button>
 </div>
+</section>
 </body>
 </html>

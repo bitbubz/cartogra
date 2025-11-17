@@ -984,6 +984,58 @@ img {
   }
 }
 
+.enrollment-page__header {
+  background-color: #004f62;
+}
+.enrollment-page__hero {
+  background-image: url("../../../assets/images/contact-page-banner.jpg");
+  background-size: cover;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.enrollment-page__hero__h1 {
+  color: white;
+}
+.enrollment-page__hero__p {
+  color: white;
+}
+.enrollment-page__form-page {
+  padding-top: 30px;
+  background-color: #0c7577;
+  justify-content: flex-start;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 1000px;
+}
+.enrollment-page__form-page__form {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.enrollment-page__form-page__form__checkbox {
+  max-width: 500px;
+}
+.enrollment-page__form-page__form__destination_form {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.enrollment-page__form-page__form label {
+  color: white;
+}
+.enrollment-page__form-page__form input {
+  width: 500px;
+}
+.enrollment-page__form-page__form select {
+  width: 500px;
+}
+
 .error {
   border: 1px solid red;
 }
